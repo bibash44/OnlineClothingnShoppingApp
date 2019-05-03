@@ -34,7 +34,8 @@
                     android:hint="Enter Passowrd *"
                     android:textStyle="italic"
                     android:id="@+id/txt_lgn_passowrd"
-                    android:layout_below="@id/txt_lgn_email"/>
+                    android:layout_below="@id/txt_lgn_email"
+                    android:inputType="textPassword"/>
 
                 <Button
                     android:layout_width="match_parent"
