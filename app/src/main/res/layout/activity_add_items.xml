@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddItemsActivity"
+    android:padding="15dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter item name *"
+                android:id="@+id/txt_item_name"
+                android:textStyle="italic"
+                android:inputType="text"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter item Price (in Rs.) *"
+                android:id="@+id/txt_item_price"
+                android:textStyle="italic"
+                android:inputType="number"
+                android:layout_below="@id/txt_item_name"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter item image name *"
+                android:id="@+id/txt_item_image_name"
+                android:textStyle="italic"
+                android:inputType="text"
+                android:layout_below="@id/txt_item_price"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_item_desciption"
+                android:layout_below="@id/txt_item_image_name"
+                android:hint="Enter item Description *"
+                android:textStyle="italic"
+                android:inputType="textMultiLine"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add item"
+                android:id="@+id/btn_add_an_item"
+                android:background="@color/colorAccent"
+                android:layout_below="@id/txt_item_desciption"
+                android:textColor="#fff"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

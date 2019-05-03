@@ -2,6 +2,7 @@ package com.example.onlineclothingshopping;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -59,12 +60,15 @@ public class LoginActivity extends Fragment implements View.OnClickListener {
 
             else if(email.equals(registered_user_email) && password.equals(registered_user_password)){
                 Toast.makeText(getActivity(), "Welcome "+sharedPreferences.getString("USER_FULLNAME","no value"), Toast.LENGTH_SHORT).show();
+                Intent after_login_intent= new Intent(getActivity(), AfterLoginActivity.class);
+                startActivity(after_login_intent);
             }
 
 
             else{
                 txt_email.setError("Email and password didnot match, please try again");
                 txt_email.requestFocus();
+                txt_password.setText(null);
             }
 
         }
